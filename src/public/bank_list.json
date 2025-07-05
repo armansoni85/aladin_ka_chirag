@@ -1,0 +1,192 @@
+{
+  "data": {
+    "banklist": [
+      {
+        "bankID": 1,
+        "bankLogo": "",
+        "bankName": "AU Small Finance Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 2,
+        "bankLogo": "",
+        "bankName": "Axis Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 3,
+        "bankLogo": "",
+        "bankName": "Bandhan Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 4,
+        "bankLogo": "",
+        "bankName": "Bank of Baroda",
+        "reserved": "1"
+      },
+      {
+        "bankID": 5,
+        "bankLogo": "",
+        "bankName": "Bank of India",
+        "reserved": "1"
+      },
+      {
+        "bankID": 6,
+        "bankLogo": "",
+        "bankName": "Bank of Maharashtra",
+        "reserved": "1"
+      },
+      {
+        "bankID": 7,
+        "bankLogo": "",
+        "bankName": "Canara Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 8,
+        "bankLogo": "",
+        "bankName": "Central Bank of India",
+        "reserved": "1"
+      },
+      {
+        "bankID": 9,
+        "bankLogo": "",
+        "bankName": "City Union Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 10,
+        "bankLogo": "",
+        "bankName": "Dhanlaxmi Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 11,
+        "bankLogo": "",
+        "bankName": "Equitas Small Finance Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 12,
+        "bankLogo": "",
+        "bankName": "Federal Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 13,
+        "bankLogo": "",
+        "bankName": "HDFC Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 14,
+        "bankLogo": "",
+        "bankName": "ICICI Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 15,
+        "bankLogo": "",
+        "bankName": "IDBI Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 16,
+        "bankLogo": "",
+        "bankName": "Indian Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 17,
+        "bankLogo": "",
+        "bankName": "Indian Overseas Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 18,
+        "bankLogo": "",
+        "bankName": "IndusInd Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 19,
+        "bankLogo": "",
+        "bankName": "Jammu & Kashmir Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 20,
+        "bankLogo": "",
+        "bankName": "Kotak Mahindra Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 21,
+        "bankLogo": "",
+        "bankName": "Punjab & Sind Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 22,
+        "bankLogo": "",
+        "bankName": "Punjab National Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 23,
+        "bankLogo": "",
+        "bankName": "RBL Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 24,
+        "bankLogo": "",
+        "bankName": "South Indian Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 25,
+        "bankLogo": "",
+        "bankName": "State Bank of India (SBI)",
+        "reserved": "1"
+      },
+      {
+        "bankID": 26,
+        "bankLogo": "",
+        "bankName": "Suryoday Small Finance Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 27,
+        "bankLogo": "",
+        "bankName": "Tamilnad Mercantile Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 28,
+        "bankLogo": "",
+        "bankName": "UCO Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 29,
+        "bankLogo": "",
+        "bankName": "Union Bank of India",
+        "reserved": "1"
+      },
+      {
+        "bankID": 30,
+        "bankLogo": "",
+        "bankName": "Utkarsh Small Finance Bank",
+        "reserved": "1"
+      },
+      {
+        "bankID": 31,
+        "bankLogo": "",
+        "bankName": "Yes Bank",
+        "reserved": "1"
+      }
+    ]
+  }
+}

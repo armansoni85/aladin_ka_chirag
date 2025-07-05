@@ -1,0 +1,1690 @@
+
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="screen-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-fullscreen" content="true">
+<meta name="x5-orientation" content="portrait">
+<meta name="x5-page-mode" content="app">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+<meta name="apple-mobile-web-app-title" content="Welcome">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta content="email=no" name="format-detection">
+<title>BDG</title>
+<link rel="icon" href="https://lucknow.club/upload/1000/d78f681075c06fcdd1c093d3ffb856f4.png">
+<link rel="stylesheet" type="text/css" href="https://in.piccdn123.com/static/_template_/red/css/main.css?v=20240925006">
+
+<style>
+    .mobileSelect .content .btnBar .ensure {
+        width: auto;
+    }
+    .chatroom-overlay {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        touch-action: none;
+        max-width: 500px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+</style>
+
+<script src="https://lucknow.club/static/js2/lang.js?v=20240925003"></script>
+<script> setLanguage('en_us')</script>
+<script>
+    var imgCdn = "https://in.piccdn123.com";
+    var fontTemplate = "_template_/red";
+    var copy_succ = "Copy successful";
+    var please_stay_tuned = "Please stay tuned";
+    var sever_error_500 = "Internal Server Error: 500, please contact customer service for assistance";
+    var request_timed_out = "Request timed out, please check your network";
+</script>
+  <link rel="stylesheet" type="text/css" href="https://in.piccdn123.com/static/_template_/red/css/turntable.css?v=20240925006">
+</head>
+
+<body>
+  <div id="app">  
+    <input type="hidden" name="rouletteSpinsReceivedId" value="">
+    <input type="hidden" name="fissionRouletteUserRoundId" value="549281">
+    <input type="hidden" name="nologin" value="0">
+    <input type="hidden" id="page" value="1">
+    <input type="hidden" id="pageWithdraw" value="1">
+    <div class="van-nav-bar van-hairline--bottom">
+        <a href="javascript:history.go(-1)" class="van-nav-bar__left">
+          <i class="van-icon van-icon-arrow-left van-nav-bar__arrow">
+            
+          </i>
+        </a>
+        <div class="van-nav-bar__title van-ellipsis">
+          <div>
+          invite to get money          </div>
+        </div>
+
+        <div class="van-nav-bar__right">
+          <a href="/customerService"><img src="https://in.piccdn123.com/static/_template_/red/img/cskh.svg"></a>
+        </div>
+    </div>
+
+
+    <div class="main">
+      
+      <div class="main-content">
+        <div class="turntable">
+
+        
+
+          <div class="content">
+
+            <div class="withd">
+              <img class="withd_icon" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/money.webp">
+              <div class="withd_txt">
+                ₹<span class="balance"></span>
+              </div>
+
+                            <div class="withd_btn withd_btn_pop" >
+                Withdraw              </div>  
+               
+
+            </div>
+
+            <div class="van-progress turntable_progress">
+              <span class="van-progress__portion" style="width: 93.73%;">
+              </span>
+              <span class="van-progress__pivot" style="left: 93.73%; transform: translate(-93.73%, -50%);">
+                93.73 win              </span>
+            </div>
+
+            <div class="des">
+                                             <span class="des_bule needMoneyWithdraw" beforetxt="₹">
+                Earn ₹ 500 to withdraw                              </span>
+               
+            </div>
+         
+
+            <div class="wheel-container">
+
+              <div class="turntable_prize">
+
+
+                <!-- 转盘 -->
+                  <div class="wheel" id="objs">
+                    <canvas class="spins_prize" id="wheelCanvas" width="700px" height="700px">
+                    </canvas>
+                    <div id="pointer" class="pointer">
+                      x <span id="rouletteSpins">x</span>
+                    </div>
+                    
+                  </div>
+
+                <!-- 转盘 -->
+
+                <img class="prize_light" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/light.webp">
+                <img class="person" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/5.webp">
+                <img class="coin" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/4.webp">
+                
+              </div>
+
+
+              <div class="countdown">
+                                  Expires in                  <div id="countdown">2024-10-29 00:00:01 </div>
+                              </div>
+
+
+
+
+              <img class="allr" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/r.webp">
+            </div>
+
+            <div class="btn">
+              Invite friends to help with withdrawals              <img class="btn_icon" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/share.webp">
+            </div>
+
+            <div class="winning">
+
+              <div class="winning_report">
+                <span class="active">
+                  Winning report                </span>
+                <span> 
+                  My reference                </span>
+                <span>
+                  My Withdrawal                </span>
+              </div>
+
+              <div>
+                
+                <div class="winning_list">
+
+                  <div class="scroll-up">
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******167                        </span>
+                        <span class="winning_item_middle">
+                          U-pBq3LLpyOP                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******886                        </span>
+                        <span class="winning_item_middle">
+                          U-HgkNdxWUdj                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******927                        </span>
+                        <span class="winning_item_middle">
+                          U-qH4jlDeWt2                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******002                        </span>
+                        <span class="winning_item_middle">
+                          U-AjKgvLaZl7                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******985                        </span>
+                        <span class="winning_item_middle">
+                          U-OSuqkb3Hf1                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******106                        </span>
+                        <span class="winning_item_middle">
+                          U-KMDQtSt7VU                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******611                        </span>
+                        <span class="winning_item_middle">
+                          U-eaydrBuNkE                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******769                        </span>
+                        <span class="winning_item_middle">
+                          U-3WiUPslXdn                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******847                        </span>
+                        <span class="winning_item_middle">
+                          U-u5AD6PyRdN                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******633                        </span>
+                        <span class="winning_item_middle">
+                          U-LAFXYzUtyn                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******397                        </span>
+                        <span class="winning_item_middle">
+                          U-KzDUfnI45x                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******099                        </span>
+                        <span class="winning_item_middle">
+                          U-0VVEJpJrPe                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******996                        </span>
+                        <span class="winning_item_middle">
+                          U-xImDHhpjjI                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******688                        </span>
+                        <span class="winning_item_middle">
+                          U-k7YPScyEZZ                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******417                        </span>
+                        <span class="winning_item_middle">
+                          U-0jDlp17mmR                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******363                        </span>
+                        <span class="winning_item_middle">
+                          U-eYbKLKI7s2                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******895                        </span>
+                        <span class="winning_item_middle">
+                          U-esmGFlR47Q                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******376                        </span>
+                        <span class="winning_item_middle">
+                          U-hKI3B3JhVK                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******384                        </span>
+                        <span class="winning_item_middle">
+                          U-iqPoFoIfZ3                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                          <div class="winning_item">
+                        <span class="winning_item_left">
+                          9******215                        </span>
+                        <span class="winning_item_middle">
+                          U-LBTZHOUiCi                        </span>
+                        <div class="winning_item_right">
+                          +500                          <img class="winning_item_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp">
+                        </div>
+                      </div>
+                                      </div>
+                </div>
+
+                <div class="winning_list">
+                  <div class="winning_item rowTemplate" style="display:none;">
+                    <span class="winning_item_left"  id="received_time">
+                    </span>
+                    <span class="winning_item_middle" style="visibility: hidden;">
+                    </span>
+                    <div class="winning_item_right">
+                      <img class="winning_item_img" src="" id="image">
+                      <span id="money" txt="+"></span>
+                      <span id="prizes_name"></span>
+                    </div>
+                  </div>
+                  <div class="infiniteScroll__loading dataEmpty" style="display: none">
+                    <div>No more</div>
+                  </div>
+
+                  <div class="redeem-container-record-itemsBox">
+                    <div class="infiniteScroll ptr--top" id="refresh">
+                      <div class="infiniteScroll__loading t-table-body" style="overflow-y:hidden">
+                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="winning_list">
+                  <div class="rechargeh__container-content__item-body rowWithdrawTemplate" style="display: none">
+                    <div>
+                      <span>Status</span>
+                      <span class="type" id="status_name"></span>
+                    </div>  
+                    <div>
+                        <span>Amount</span>
+                        <span class="price" id="money"></span>
+                      </div>
+
+                      <div>
+                        <span>Time</span>
+                        <span class="recharge_time" id="ut"></span>
+                      </div>
+                      <div>
+                        <span>Order number</span>
+                        <div class="order">
+                          <span class="order-number" id="order_number"></span>
+                          <img src="https://in.piccdn123.com/static/_template_/red/img/copy.png" alt="" class="my-copy">
+                        </div>
+                      </div>
+                      <div>
+                        <span>Remarks</span>
+                      </div>
+                      <div>
+                        <textarea class="textarea remark" name="remark" cols="30" rows="10" readonly="" id="remark"></textarea>
+                      </div>
+                  </div>
+                
+                  <div class="infiniteScroll__loading dataWithdrawEmpty" style="display: none">
+                    <div>No more</div>
+                  </div>
+
+                  <div class="redeem-container-record-itemsBox">
+                    <div class="infiniteScroll ptr--top" id="refresh">
+                      <div class="infiniteScroll__loading t-table-body-withdraw" style="overflow-y:hidden">
+                          
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+              </div>
+            </div>
+
+
+            <div class="turn_rule">
+              <h2 style="margin-bottom: 15px;">
+                Rules              </h2>
+              <div>
+                1. When the accumulated amount reaches 500.00, you can apply for  withdrawal.              </div>
+              <div>
+                2. For every friend you invite to register and your friend tops up 100.00, you will get 1 times to free spin              </div>
+              <div>
+                3. The activity lasts for 3 days. After the activity period ends, the accumulated rewards will be reset and the activity will start again              </div>
+              <div>
+                4. Each user can enjoy 1 free spin opportunity per day. The spin count resets at 24:00 every day              </div>
+              <div>
+                5. After approval of the application, the bonus will be directly deposited into your wallet              </div>
+              <div>
+                6. The invitee needs to bind the inviter’s invitation code for the recommendation to be successful              </div>
+              <div>
+                7. The interpretation of the activity is reserved by our company. If you have any questions, please contact customer service              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+      <!-- withdraw弹窗 -->
+      <div class="van-popup van-popup--center popup-withdraw">
+        <div class="result-container">
+          <i class="van-badge__wrapper van-icon van-icon-cross cross_icon">
+            <img src="https://in.piccdn123.com/static/_template_/red/img/close_black.png">
+          </i>
+
+          <div class="turn_title">
+            <img class="title_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/money.webp">
+            <span>
+              Getfor free            </span>
+          </div>
+<!-- 
+          <span class="des1">
+            Congratulations on your good luck, you win ₹  for free          </span> -->
+
+          <div class="withd">
+            <img class="title_img" src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/money.webp">
+            <div class="withd_txt">
+              ₹ <span class="balance">0</span>
+            </div>
+          </div>
+
+
+          <div class="van-progress turntable_progress">
+            <span class="van-progress__portion" style="width: 93.73%;">
+            </span>
+            <span class="van-progress__pivot" style="left: 93.73%; transform: translate(-93.73%, -50%);">
+              93.73%            </span>
+          </div>
+
+          <div class="des2">
+                          Withdrawal still takes<span class="des2_bule needMoneyWithdraw" beforetxt="₹">₹31.350</span>
+             
+          </div>
+
+          <button class="turn_btn">
+            Take morefor free          </button>
+
+          <div class="list_content">
+            <div class="scroll-up">
+                              <div class="list">
+                  <span class="list_left">
+                    9******660                  </span>
+                  <span class="list_middle">
+                    U-6CWwC63Qm4                  </span>
+                  <div class="list_right">
+                    +5136                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******274                  </span>
+                  <span class="list_middle">
+                    U-wzKK6L1Hzd                  </span>
+                  <div class="list_right">
+                    +6487                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******386                  </span>
+                  <span class="list_middle">
+                    U-Xb5J9riGJ0                  </span>
+                  <div class="list_right">
+                    +7214                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******143                  </span>
+                  <span class="list_middle">
+                    U-tUSTIeJBhQ                  </span>
+                  <div class="list_right">
+                    +7842                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******114                  </span>
+                  <span class="list_middle">
+                    U-TgCU9sv20P                  </span>
+                  <div class="list_right">
+                    +4971                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******010                  </span>
+                  <span class="list_middle">
+                    U-LkbWDUjIAi                  </span>
+                  <div class="list_right">
+                    +8602                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******826                  </span>
+                  <span class="list_middle">
+                    U-2UFbGvEHAb                  </span>
+                  <div class="list_right">
+                    +3545                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******000                  </span>
+                  <span class="list_middle">
+                    U-fhGrTBqc6n                  </span>
+                  <div class="list_right">
+                    +656                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******128                  </span>
+                  <span class="list_middle">
+                    U-5OiRwHCEPZ                  </span>
+                  <div class="list_right">
+                    +1773                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******322                  </span>
+                  <span class="list_middle">
+                    U-LWLWv9jZXi                  </span>
+                  <div class="list_right">
+                    +5651                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******753                  </span>
+                  <span class="list_middle">
+                    U-OIBWMrgmac                  </span>
+                  <div class="list_right">
+                    +5765                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******428                  </span>
+                  <span class="list_middle">
+                    U-xX2xjsV68g                  </span>
+                  <div class="list_right">
+                    +4816                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******921                  </span>
+                  <span class="list_middle">
+                    U-4prSUeu4oY                  </span>
+                  <div class="list_right">
+                    +5543                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******462                  </span>
+                  <span class="list_middle">
+                    U-Jry8ErBfk9                  </span>
+                  <div class="list_right">
+                    +7622                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******800                  </span>
+                  <span class="list_middle">
+                    U-GsFCAE2RJS                  </span>
+                  <div class="list_right">
+                    +5080                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******874                  </span>
+                  <span class="list_middle">
+                    U-IgCbXAiqRC                  </span>
+                  <div class="list_right">
+                    +3748                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******642                  </span>
+                  <span class="list_middle">
+                    U-nNC2Rwm8LL                  </span>
+                  <div class="list_right">
+                    +5603                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******394                  </span>
+                  <span class="list_middle">
+                    U-UgrJ9sopq2                  </span>
+                  <div class="list_right">
+                    +7016                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******617                  </span>
+                  <span class="list_middle">
+                    U-d1dQWaJmza                  </span>
+                  <div class="list_right">
+                    +3812                  </div>
+                </div>
+                              <div class="list">
+                  <span class="list_left">
+                    9******893                  </span>
+                  <span class="list_middle">
+                    U-n5DmBos7sH                  </span>
+                  <div class="list_right">
+                    +8049                  </div>
+                </div>
+                          </div>
+          </div>
+<!-- 
+          <div class="van-checkbox reminders">
+            <div class="van-checkbox__icon van-checkbox__icon--round">
+              <i class="van-badge__wrapper van-icon van-icon-success">
+
+              </i>
+            </div>
+            <span class="van-checkbox__label">
+              No more reminders today
+            </span>
+          </div> -->
+
+
+        </div>
+        
+      </div>
+
+
+      <!-- 分享给好友弹窗 -->
+      <div class="van-popup van-popup--bottom popup-share">
+        <div class="prize-container">
+          <i class="van-badge__wrapper van-icon van-icon-cross cross_icon">
+            <img src="https://in.piccdn123.com/static/_template_/red/img/close_black.png">
+          </i>
+          <div class="des1">
+            Invite friends to help with withdrawals          </div>
+          <div class="sharer-box shape">
+            
+            <div class="sharer-box-content">
+              <a  target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flucknow.club%2Fregister%3Fshare_reg_type%3DfissionRoulette%26invite_code%3D816C310423983"><img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/facebook.png"></a>
+              <a target="_blank" href="https://wa.me/?text=https%3A%2F%2Flucknow.club%2Fregister%3Fshare_reg_type%3DfissionRoulette%26invite_code%3D816C310423983" ><img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/whatapp.png"></a>
+              <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flucknow.club%2Fregister%3Fshare_reg_type%3DfissionRoulette%26invite_code%3D816C310423983" ><img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/twitter.png"></a>
+              <!-- <a target="_blank" href="#"><img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/titok.png"></a> -->
+              <a target="_blank" href="https://t.me/share/url?url=https%3A%2F%2Flucknow.club%2Fregister%3Fshare_reg_type%3DfissionRoulette%26invite_code%3D816C310423983" ><img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/telegram.png"></a>
+              <a target="_blank" href="/cdn-cgi/l/email-protection#e2dd808d869bdf8a96969291c7d1a3c7d0a4c7d0a48e9781898c8d95cc818e9780c7d0a49087858b91968790c7d1a4918a839087bd908785bd969b9287c7d1a6848b91918b8d8cb08d978e87969687c7d0d48b8c948b9687bd818d8687c7d1a6dad3d4a1d1d3d2d6d0d1dbdad1"><img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/email.png"></a>
+            </div>
+
+          </div>
+          <div class="des2">
+            Share this referral link with your friends          </div>
+          <div class="copy_input">
+            <span class="copy_input_left" id="copy">https://lucky-strike.in/register?invitationCode=318383335856</span>
+            <span class="copy_input_right copy">
+              Copy            </span>
+          </div>
+        </div>
+        
+      </div>
+
+
+
+      
+
+      <!-- 复制 -->
+      <div class="van-toast msg" style="z-index: 2001;display: none;">
+
+        <i class="van-icon van-toast__icon">
+          <img src="https://in.piccdn123.com/static/_template_/red/img/gx_icon.png" style="width: 48px; height: 48px;">
+        </i>
+
+        <div class="van-toast__text">
+          Copy successful        </div>
+        
+      </div>
+
+      <!-- 转盘音效 -->
+      <audio id="soundEffect" src="https://in.piccdn123.com/static/_template_/red/media/turntable_sound.mp3"></audio>
+
+
+      <!-- 结果弹窗 -->
+      <div class="spins_tips">
+        <img src="https://in.piccdn123.com/static/_template_/red/img/close_white.png" class="close">
+        <div class="spins_btn" id="closeAwardTip"><a href='#' class='spins_btn'><span id="closeAwardText">Claim Now</span></a></div>
+        <div id="tip"></div>
+      </div>
+
+      <div class="light_bg">
+        <img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/light2.png">
+      </div>
+
+      <div class="light_bg2">
+        <img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/light3.png">
+      </div>
+
+      <div class="light_bg3">
+        <img src="https://in.piccdn123.com/static/_template_/red/img/activity/turntable/lihua.png">
+      </div>
+      
+      
+    
+
+
+    <!-- 出款提示弹窗 -->
+    <div class="dialog" id="widthdrawSuccess">
+      <div class="dialog__container">
+        <div class="dialog__container-img">
+          <img src="https://in.piccdn123.com/static/_template_/red/img/activity/successfullyReceived.png" class="succed">
+        </div>
+        <div class="dialog__container-title">
+          <h1>
+            Withdrawal request successful          </h1>
+        </div>
+        <!-- <div class="dialog__container-content">
+            2
+        </div> -->
+        <div class="dialog__container-footer">
+          <!-- <button>
+            Cancel
+          </button> -->
+          <button  id="widthdrawSuccessConfirm" >
+            Confirm          </button>
+        </div>
+        
+      </div>
+      <div class="dialog__outside">
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+  <div class="empty__container template_empty_content" style="display: none">
+    <img alt="" src="https://in.piccdn123.com/static/_template_/red/img/empty.png">
+    <p> No data </p>
+</div>
+
+<div class="infiniteScroll__loading template_no_more" style="display: none; justify-content: center; box-shadow: none;min-height:auto">
+    <div>No more</div>
+</div>
+
+<div class="no-data-text" style="display: none">No data</div>
+
+<div class="swal-overlay" id="confirm_dialog" style="display: none">
+    <div class="swal-modal">
+        <div class="swal-icon swal-icon--warning">
+          <span class="swal-icon--warning__body">
+              <span class="swal-icon--warning__dot"></span>
+          </span>
+        </div>
+        <div class="swal-text" style=""></div>
+        <div class="swal-footer">
+            <div class="swal-button-container">
+                <button class="swal-button swal-button--confirm">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="van-dialog Warning" style="z-index: 9999; display: none;" id="common_confirm_dialog2">
+
+    <div class="van-dialog__header">Warning</div>
+
+    <div class="van-dialog__content">
+        <div class="van-dialog__message van-dialog__message--has-title">Are you sure to delete this message?</div>
+    </div>
+
+    <div class="van-hairline--top van-dialog__footer">
+        <button type="button" class="van-button van-button--large van-dialog__cancel">
+            <div class="van-button__content">
+
+                <span class="van-button__text">Cancel</span>
+
+            </div>
+        </button>
+
+        <button type="button" class="van-button van-button--large van-dialog__confirm van-hairline--left">
+            <div class="van-button__content">
+
+                <span class="van-button__text">Confirm</span>
+
+            </div>
+        </button>
+    </div>
+
+</div>
+
+<div class="van-overlay" style="z-index: 2001; display: none;"></div>
+
+
+<script data-cfasync="false" src="https://lucknow.club//cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://lucknow.club//static/js/jquery-1.11.1.min.js"></script>
+<script src="https://lucknow.club/static/js/clipboard.min.js"></script>
+<script src="https://lucknow.club/static/js2/jquery.cookie-1.4.1.min.js"></script>
+<script src="https://lucknow.club/static/js2/my-common.js?v=20240925003"></script>
+<script src="https://lucknow.club/static/js2/customer_service_drag.js?v=20240925003"></script>
+<script src="https://lucknow.club/static/js2/lazyload.min.js"></script>
+
+<script>
+    let _cancelBtnText = "Cancel";
+    let _confirmBtnText = "Confirm";
+    let _allText = "All";
+</script>
+
+  <script src="https://lucknow.club/static/js/clipboard.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // 转盘外圈灯闪烁动画
+      var $box = $('.prize_light');
+      setInterval(function(){
+        $box.toggleClass('rotate120');
+      }, 500);
+
+
+      // withdraw弹窗
+      $(".turntable .content .withd_btn_pop").click(function(){					
+        $(".popup-withdraw,.van-overlay").show();
+      });
+
+      $(".result-container .cross_icon").click(function(){
+        $(".popup-withdraw,.van-overlay").hide();
+      });
+
+      $(".turn_btn").click(function(){
+        $(".popup-share,.van-overlay").show();
+        $(".popup-withdraw").hide();
+      });
+
+
+
+      // 分享给好友弹窗
+      $(".turntable .content .btn").click(function(){
+        let nologin = $('input[name=nologin]').val();
+
+        if(nologin == 1) {
+          var urlParams = new URLSearchParams(window.location.search);
+          if(urlParams && urlParams.get('share_reg_type')) {
+              window.location.href = '/register';
+          } else {
+              window.location.href = '/login';
+          }
+          return;
+        }
+
+        $(".popup-share,.van-overlay").show();
+      });
+
+      $(".prize-container .cross_icon").click(function(){
+        $(".popup-share,.van-overlay").hide();
+      });
+
+
+      // 列表切换
+      $('.turntable .content .winning_report span').click(function() {
+        i = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.winning_list').eq(i).show().siblings().hide();
+      });
+      
+      // 单选按钮勾选切换
+      $('.reminders').click(function() {
+        $('.van-checkbox__icon').toggleClass('van-checkbox__icon--checked')
+      });
+
+
+
+    // 复制链接toast
+    var cc = document.getElementById("copy");
+    if (cc !== null) {
+      var ss = cc.innerText;
+      var clipboard = new ClipboardJS('.copy', {
+        text: function() {
+          return ss;
+        }
+      });
+      clipboard.on('success', function(e) {
+        $('.msg').fadeIn(200).delay(2000).fadeOut(500);
+      });
+      clipboard.on('error', function(e) {
+        console.log(e);
+      });
+    }
+
+
+      // 滚动速度（毫秒）
+      var scrollSpeed = 1000;
+
+      // 开始滚动
+      function startScroll() {
+        var scrollContainer = $('.winning_list');
+        var scrollContent = $('.scroll-up');
+        var firstItemHeight = scrollContent.children('.winning_item').first().outerHeight(true); // 获取第一行内容的高度
+
+        function scroll() {
+          scrollContent.animate({top: '-=' + firstItemHeight + 'px'}, scrollSpeed, 'linear', function(){
+            var firstItem = $(this).children('.winning_item').first(); // 获取第一行内容
+            $(this).append(firstItem); // 将第一行内容追加到最后
+            $(this).css('top', 0); // 重置滚动内容的位置
+            setTimeout(scroll, 0); // 递归调用滚动函数，实现无缝滚动
+          });
+        }
+
+        scroll(); // 开始滚动
+      }
+
+      // 停止滚动
+      function stopScroll() {
+        $('.scroll-up').stop(); // 停止滚动动画
+      }
+
+      // 当鼠标悬停在区域时停止滚动，移开时继续滚动
+      $('.winning_list').hover(stopScroll, startScroll);
+
+      // 初始化滚动
+      startScroll();
+
+
+      // 倒计时
+      function updateCountdown() {
+                  var targetDate = new Date("2024-10-29 00:00:01").getTime(); // 设置目标日期时间
+          var currentDate = new Date().getTime(); // 获取当前日期时间
+
+          var timeRemaining = targetDate - currentDate;
+          if(timeRemaining > 0) {
+            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // 格式化小时、分钟和秒，确保它们始终是两位数
+            var daysFormatted = String(days).padStart(1, '0');
+            var hoursFormatted = String(hours).padStart(2, '0');
+            var minutesFormatted = String(minutes).padStart(2, '0');
+            var secondsFormatted = String(seconds).padStart(2, '0');
+
+            // 更新倒计时显示
+            $("#countdown").text(daysFormatted + "Day " + hoursFormatted + ":" + minutesFormatted + ":" + secondsFormatted);
+          }
+              }
+
+      // 初始更新倒计时
+      updateCountdown();
+
+      // 每秒更新倒计时
+      setInterval(updateCountdown, 1000);
+
+      
+    });
+  </script>
+
+
+
+
+<!-- 抽奖转盘 -->
+<script src="https://lucknow.club/static/js/jquery.rotate.js"></script>
+
+<script>
+
+  var urlParams = new URLSearchParams(window.location.search);
+  if(urlParams && urlParams.get('share_reg_type')) {
+      let share_reg_type = urlParams.get('share_reg_type');
+      localStorage.setItem('share_reg_type', share_reg_type);
+  }
+
+  var balance = 0;
+  var turnWheel = {
+		outsideRadius: 302,
+		textRadius: 250,
+		insideRadius: 0,
+		startAngle: 0,
+		bRotate: false
+	};
+
+  var prizes = [
+      {
+      id: "9",
+      idx:'0',
+      prize_number:"1",
+      award_type:"4",
+      reward_money:"0.00",
+      name: "TRY AGAIN", 
+      fullname: "TRY AGAIN",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+      {
+      id: "10",
+      idx:'1',
+      prize_number:"2",
+      award_type:"1",
+      reward_money:"1.00",
+      name: "1.00", 
+      fullname: "",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+      {
+      id: "11",
+      idx:'2',
+      prize_number:"3",
+      award_type:"2",
+      reward_money:"200",
+      name: "200", 
+      fullname: "200",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+      {
+      id: "12",
+      idx:'3',
+      prize_number:"4",
+      award_type:"1",
+      reward_money:"200",
+      name: "200.00", 
+      fullname: "",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+      {
+      id: "13",
+      idx:'4',
+      prize_number:"5",
+      award_type:"3",
+      reward_money:"100.00",
+      name: "100.00", 
+      fullname: "",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+      {
+      id: "14",
+      idx:'5',
+      prize_number:"6",
+      award_type:"1",
+      reward_money:"50.00",
+      name: "50.00", 
+      fullname: "",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+      {
+      id: "15",
+      idx:'6',
+      prize_number:"7",
+      award_type:"2",
+      reward_money:"0.00",
+      name: "200", 
+      fullname: "200",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+      {
+      id: "16",
+      idx:'7',
+      prize_number:"8",
+      award_type:"1",
+      reward_money:"15.00",
+      name: "15.00", 
+      fullname: "",
+      color: "#F64A4A",
+      fontcolor: "#000000",
+      img: "",
+      imgObj: new Image()
+    },
+    ];
+ 
+ 
+  var prizeMap = {};
+
+  function setPiizeMap(t_prizes) {
+      //var colorArr = ["#F64A4A","#ED6619","#F6649C","#E358F5","#A345E7","#34A8ED","#4CE9D2","#51F539","#DBF539","#F6C000"];
+    let colorArr = ["#814FED","#FF76CB","#814FED","#FF76CB","#814FED","#FF76CB","#814FED","#FF76CB","#814FED","#FF76CB"];
+
+    let t_prizeMap = {};
+    for (let i = 0,l = t_prizes.length; i < l; i++) {
+      t_prizes[i].color = colorArr[i];
+
+      if(t_prizes[i].award_type == 1) {
+        // coidn
+        t_prizes[i].imgObj.src =  'https://in.piccdn123.com/static/_template_/red/img/activity/spin_default.png';
+      } else if(t_prizes[i].award_type == 2) {
+        //rand coin
+        t_prizes[i].imgObj.src =  'https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize03.webp';
+      } else if(t_prizes[i].award_type == 3) {
+        //withdraw
+        t_prizes[i].imgObj.src =  'https://in.piccdn123.com/static/_template_/red/img/activity/turntable/wallet.png';
+      } else if(t_prizes[i].award_type == 4){
+        //nowin
+        t_prizes[i].imgObj.src =  t_prizes[i].img != '' ? t_prizes[i].img : 'https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize01.webp';
+      } else {
+        t_prizes[i].imgObj.src =  t_prizes[i].img != '' ? t_prizes[i].img : 'https://in.piccdn123.com/static/_template_/red/img/activity/default_prize.png';
+      }
+    
+
+      if(i % 2 == 0) {
+        t_prizes[i].fontcolor = '#000000';
+      } else {
+        t_prizes[i].fontcolor = '#FFFFFF';
+      }
+
+      t_prizeMap[t_prizes[i]['idx']] = t_prizes[i];
+    }
+    prizeMap =  t_prizeMap;
+  }
+
+
+  setPiizeMap(prizes);
+  
+
+
+$(document).ready(function() {
+
+    $('.t-table-body').height($(window).height() - $('.t-table-body')[0].offsetTop);
+    //$('.t-table-body-withdraw').height($(window).height() - $('.t-table-body-withdraw')[0].offsetTop);
+
+    let hasMoreData = true;
+    let isLoading = false;
+
+    let hasMoreDataWithdraw = true;
+    let isLoadingWithdraw = false;
+
+    $('.t-table-body').scroll(function() {
+        var div = $(this);
+        // 当滚动到底部时
+        if ((div.scrollTop() + div.innerHeight() +50) >= div[0].scrollHeight) {
+            // 执行加载更多的函数
+            getData();
+        }
+    });
+
+    $('.t-table-body-withdraw').scroll(function() {
+        var div = $(this);
+        // 当滚动到底部时
+        if ((div.scrollTop() + div.innerHeight() +50) >= div[0].scrollHeight) {
+            // 执行加载更多的函数
+            getDataWithDraw();
+        }
+    });
+    
+    
+
+    function getDataWithDraw() {
+        if (!hasMoreDataWithdraw || isLoadingWithdraw) {
+            return;
+        }
+        isLoadinWithdrawg = true;
+
+        //$('.t-table-body').append(getLoadingHtml2());
+        
+        let page = parseInt($("#pageWithdraw").val());
+        let limit = 30;
+        let timeout = page===1? 0 : 500;
+        setTimeout(function () {
+            makePostRequest('/fissionRoulette/withdrawRecord', {
+                page: page,
+                limit: limit
+            }, function (response) {
+                isLoadingWithdraw = false;
+                $('.t-table-body-withdraw').children('.loading').remove();
+                if (response.code === 1) {
+                    $("#pageWithdraw").val(page+1);
+                    if (page===1 && response.data.list.length===0) {
+                        hasMoreData = false;
+                        let dataEmpty = $('.dataWithdrawEmpty').clone();
+                        dataEmpty.removeClass('dataWithdrawEmpty');
+                        dataEmpty.show();
+                        $('.t-table-body-withdraw').append(dataEmpty);
+                    } else {
+                        addResultViewWithdraw(response.data);
+                        if (response.data.list.length < limit) {
+                            hasMoreDataWithdraw = false;
+                        } else {
+                            hasMoreDataWithdraw = true;
+                        }
+                    }
+
+                } else {
+                    toast(response.msg);
+                }
+            });
+        }, timeout);
+
+    }
+
+    function getData() {
+        if (!hasMoreData || isLoading) {
+            return;
+        }
+        isLoading = true;
+
+        //$('.t-table-body').append(getLoadingHtml2());
+        
+        let page = parseInt($("#page").val());
+        let limit = 30;
+        let timeout = page===1? 0 : 500;
+        setTimeout(function () {
+            makePostRequest('/fissionRoulette/record', {
+                page: page,
+                limit: limit
+            }, function (response) {
+                isLoading = false;
+                $('.t-table-body').children('.loading').remove();
+                if (response.code === 1) {
+                    $("#page").val(page+1);
+                    if (page===1 && response.data.list.length===0) {
+                        hasMoreData = false;
+                        let dataEmpty = $('.dataEmpty').clone();
+                        dataEmpty.removeClass('dataEmpty');
+                        dataEmpty.show();
+                        $('.t-table-body').append(dataEmpty);
+                    } else {
+                        addResultView(response.data);
+                        if (response.data.list.length < limit) {
+                            hasMoreData = false;
+                        } else {
+                            hasMoreData = true;
+                        }
+                    }
+
+                } else {
+                    toast(response.msg);
+                }
+            });
+        }, timeout);
+
+    }
+
+    function addResultView(data) {
+        $(data.list).each(function(index, item){
+            let template = $('.rowTemplate').clone();
+            template.removeClass('rowTemplate');
+            template.css('display', 'flex');
+            $.each(item, function (key, value) {
+                let t_field = template.find("#"+key);
+                if(t_field.length > 0) {
+                    if(t_field.attr('txt1') ) {
+                        t_field.text(t_field.attr('txt1'));
+                    } else if(t_field.attr('txt') ) {
+                        t_field.text(t_field.attr('txt') + value);
+                        if(t_field.attr('txtend')) {
+                            t_field.text(t_field.text() + t_field.attr('txtend') );
+                        }
+                    } else if(key == 'image' ) {
+                      t_field.attr('src', value);
+                    }
+                    else {
+                        t_field.text(value);
+                    }
+                }
+            });
+
+            if(item.award_type == 1) {
+                    template.find("#prizes_name").hide();
+                    template.find("#image").attr('src', 'https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize02.webp');
+            } else if(item.award_type == 2) {
+                    template.find("#prizes_name").hide();
+                    template.find("#image").attr('src', 'https://in.piccdn123.com/static/_template_/red/img/activity/turntable/prize03.webp');
+            } else if(item.award_type == 3) {
+                    template.find("#prizes_name").hide();
+                    template.find("#image").attr('src', 'https://in.piccdn123.com/static/_template_/red/img/activity/turntable/wallet.png');
+            } else if(item.award_type == 4) {
+                    template.find("#prizes_name").hide();
+                    template.find("#money").hide();
+                    
+                    template.find("#image").attr('src', 'https://in.piccdn123.com/static/_template_/red/img/activity/turntable/00.webp');
+            } else {
+                let prize_img = template.find('#image');
+                if(item.image == '') {
+                  prize_img.attr('src','https://in.piccdn123.com/static/_template_/red/img/activity/default_prize.png');
+                }
+
+                template.find("#money").hide();
+            }
+
+            $('.t-table-body').append(template);
+      });
+    }
+
+    function addResultViewWithdraw(data) {
+        $(data.list).each(function(index, item){
+            let template = $('.rowWithdrawTemplate').clone();
+            template.removeClass('rowWithdrawTemplate');
+            template.css('display', 'flex');
+            $.each(item, function (key, value) {
+                let t_field = template.find("#"+key);
+                if(t_field.length > 0) {
+                    if(t_field.attr('txt1') ) {
+                        t_field.text(t_field.attr('txt1'));
+                    } else if(t_field.attr('txt') ) {
+                        t_field.text(t_field.attr('txt') + value);
+                        if(t_field.attr('txtend')) {
+                            t_field.text(t_field.text() + t_field.attr('txtend') );
+                        }
+                    } else if(key == 'image' ) {
+                      t_field.attr('src', value);
+                    }
+                    else {
+                        t_field.text(value);
+                    }
+                }
+            });
+            $('.t-table-body-withdraw').append(template);
+      });
+    }
+
+    //重置数据
+    function resetData() {
+      hasMoreData = true;
+      isLoading = false;
+      $("#page").val(1);
+      $('.t-table-body').empty();
+      getData();
+    }
+
+    function resetDataWithdraw() {
+      hasMoreDataWithdraw = true;
+      isLoadingWithdraw = false;
+      $("#pageWithdraw").val(1);
+      $('.t-table-body-withdraw').empty();
+      getDataWithdraw();
+    }
+
+    getData();
+    getDataWithDraw();
+
+
+
+	var audio = $('#soundEffect')[0];
+	var audioPlaying = false;
+  var rotateFunc = function(idx, data) {
+    var prize = data.prize;
+    var baseAngle = 360 / prizes.length;
+    var angles = 360 * 3 / 4 - (idx * baseAngle) - baseAngle / 2;
+    $('#wheelCanvas').stopRotate();
+    $('#wheelCanvas').rotate({
+      angle: 0,
+      animateTo: angles + 360 * 10,
+      duration: 10000,
+      callback: function() {
+        turnWheel.bRotate = false;
+        var _html = "";
+          
+        if(prize.award_type == 1 || prize.award_type == 2){
+            _html += "<h1>Congratulations on receiving</h1><img src='" + prizeMap[idx].imgObj.src + "'><div><span class='prize'> +" + prize.reward_money + "</span></div>";
+            $('.spins_tips,.van-overlay,.light_bg,.light_bg2').show();
+        } else if(prize.award_type == 3){
+          _html += "<h1>Congratulations, you can withdraw cash</h1><img src='" + prizeMap[idx].imgObj.src + "'><div><span class='prize'> +" + prize.reward_money + "</span></div>";
+
+          $('.spins_tips,.van-overlay,.light_bg,.light_bg2,.light_bg3').show();
+        } else if(prize.award_type == 4){
+          _html += "<h1>Sorry, you did not win!</h1><img src='" + prizeMap[idx].imgObj.src + "'></div>";
+          $('#closeAwardText').text("Confirm");
+          $('.spins_tips,.van-overlay,.light_bg').show();
+        } else if(prize.award_type == 5){
+          _html += "<h1>Congratulations on receiving</h1><img src='" + prizeMap[idx].imgObj.src + "'><div><span class='prize'> +" + prize.reward_money + "</span></div>";
+          $('.spins_tips,.van-overlay,.light_bg,.light_bg2').show();
+        }
+
+
+
+        $("#tip").html(_html).show();
+        //$('.spins_tips,.van-overlay').show();
+        $('.balance').text(balance);
+        $('#closeAwardTip').data('award_type', data.prize.award_type); 
+        $('.van-progress__portion').css('width', data.progressBar);
+        $('.van-progress__pivot').css('left', data.progressBar).css('transform', 'translate(-'+ data.progressBar +', -50%)');
+        $('.van-progress__pivot').text(data.progressBar);
+
+        $('.needMoneyWithdraw').text($('.needMoneyWithdraw').attr('beforetxt') + data.needMoneyWithdraw);
+
+				stopAudio();  // 在转盘停止时停止音效
+
+        //setPiizeMap(prizes);
+        resetData();
+      }
+    });
+    audio.play();// 在转盘转动时播放音效
+  };
+
+  function stopAudio() {
+			if (audioPlaying) {
+				audio.pause();
+				audio.currentTime = 0;
+				audioPlaying = false;
+			}
+	}
+
+  $('.pointer').click(function() {
+    
+      let nologin = $('input[name=nologin]').val();
+
+      if(nologin == 1) {
+        var urlParams = new URLSearchParams(window.location.search);
+        if(urlParams && urlParams.get('share_reg_type')) {
+            window.location.href = '/register';
+        } else {
+            window.location.href = '/login';
+        }
+        return;
+      }
+
+      if($('#rouletteSpins').text() <= 0) {
+        return;
+      }
+      if (turnWheel.bRotate) return;
+      
+      turnWheel.bRotate = true;
+      let rouletteSpinsReceivedId = $('input[name="rouletteSpinsReceivedId"]').val();
+      let fissionRouletteUserRoundId = $('input[name="fissionRouletteUserRoundId"]').val();
+      
+      makePostRequest('/fissionRoulette/spins', {
+        id : fissionRouletteUserRoundId,
+        rouletteSpinsReceivedId:rouletteSpinsReceivedId,
+      }, 
+      function (response) {
+        if(response.code == 1) {
+            $('#rouletteSpins').text($('#rouletteSpins').text() -1 );
+            balance = response.data.balance;
+            $('input[name="rouletteSpinsReceivedId"]').val(response.data.rouletteSpinsReceivedId);
+            
+            let idx = 0;
+            for (var i = 0,l = prizes.length; i < l; i++) {
+                if(prizes[i].prize_number == response.data.prize.prize_number) {
+                idx = prizes[i].idx;
+                }
+             }
+
+            rotateFunc(idx, response.data);
+        }
+        if(response.msg) {
+          toast(response.msg);
+        }
+        //turnWheel.bRotate = false;
+      });
+     
+     });
+
+    $(".spins_tips .close, .spins_tips .spins_btn").click(function() {
+      //$('.spins_tips,.van-overlay').hide();
+      $('.spins_tips,.van-overlay,.light_bg,.light_bg2,.light_bg3').hide();
+      $award_type = $('#closeAwardTip').data('award_type');
+      if($award_type == 3) {
+        window.location.reload();
+      }
+      //drawWheelCanvas();
+    });
+
+    //提现
+    $("#withdrawToBalance").click(function () {
+      let nologin = $('input[name=nologin]').val();
+      if(nologin == 1) {
+        var urlParams = new URLSearchParams(window.location.search);
+        if(urlParams && urlParams.get('share_reg_type')) {
+            window.location.href = '/register';
+        } else {
+            window.location.href = '/login';
+        }
+        return;
+      }
+      url = '/fissionRoulette/withdrawToBalance';
+      let fissionRouletteUserRoundId = $('input[name=fissionRouletteUserRoundId]').val();
+      data = {
+        fissionRouletteUserRoundId: fissionRouletteUserRoundId,
+      };
+
+      showPageLoading();
+
+      makePostRequest(url, data, function (response) {
+        hidePageLoading();
+        if (response.code === 1) {
+          //toast(response.msg);
+          $('#widthdrawSuccess').addClass('active');
+          // setTimeout(function () {
+          //   window.location.reload();
+          // }, 1000);
+        } else {
+          showWarnDialog(response.msg)
+        }
+      });
+  });
+
+  $("#widthdrawSuccessConfirm").click(function(){
+    window.location.reload();
+  });
+
+});
+
+window.onload = function() {
+  drawWheelCanvas();
+};
+
+
+
+function drawEllipsisText(ctx, text, maxWidth) {
+  var maxWidth = 200;
+  if (ctx.measureText(text).width <= maxWidth) {
+    return text;
+  }
+
+  var ellipsis = '...';
+  var ellipsisWidth = ctx.measureText(ellipsis).width;
+  var textWidth = maxWidth - ellipsisWidth;
+  var truncatedText = '';
+
+  for (var i = 0; i < text.length; i++) {
+    var testText = truncatedText + text[i];
+    if (ctx.measureText(testText).width > textWidth) {
+      return truncatedText + ellipsis;
+    }
+    truncatedText = testText;
+  }
+
+  return text; // Should never reach here
+}
+
+function drawWheelCanvas() {
+  var canvas = document.getElementById("wheelCanvas");
+  var baseAngle = Math.PI * 2 / (prizes.length);
+  var ctx = canvas.getContext("2d");
+  var canvasW = canvas.width;
+  var canvasH = canvas.height;
+  ctx.clearRect(0, 0, canvasW, canvasH);
+  ctx.strokeStyle = "#FFFFFF";
+  //ctx.font = '35px Microsoft YaHei';
+  ctx.font = '30px Microsoft YaHei';
+  
+
+  for (var index = 0; index < prizes.length; index++) {
+    var angle = turnWheel.startAngle + index * baseAngle;
+    ctx.fillStyle = prizes[index].color;
+    ctx.beginPath();
+    ctx.arc(canvasW * 0.5, canvasH * 0.5, turnWheel.outsideRadius, angle, angle + baseAngle, false);
+    ctx.arc(canvasW * 0.5, canvasH * 0.5, turnWheel.insideRadius, angle + baseAngle, angle, true);
+    ctx.stroke();
+    ctx.fill();
+    ctx.save();
+    ctx.fillStyle = prizes[index].fontcolor;
+    var rewardName = prizes[index].name;
+    var line_height = 10;
+    var translateX = canvasW * 0.5 + Math.cos(angle + baseAngle / 2) * turnWheel.textRadius;
+    var translateY = canvasH * 0.5 + Math.sin(angle + baseAngle / 2) * turnWheel.textRadius;
+    ctx.translate(translateX, translateY);
+    ctx.rotate(angle + baseAngle / 2 + Math.PI / 2);
+
+    // Draw truncated text with ellipsis if necessary
+    var truncatedRewardName = drawEllipsisText(ctx, rewardName, 70); // Assume 70 as the max width for the text
+    ctx.fillText(truncatedRewardName, -ctx.measureText(truncatedRewardName).width / 2, 0);
+    var img = prizes[index].imgObj;
+    img.onload = function() {
+      ctx.drawImage(img, -15, 10);
+    };
+
+    // Set new image size
+    var newWidth = 80;
+    var newHeight = 80;
+    try {
+				ctx.drawImage(img, -40, 20, newWidth, newHeight);
+			} catch(error) {
+				console.log('wheel img is null');
+			}
+    ctx.restore();
+  }
+}
+var dailySpins = 2;
+var remainingSpins = dailySpins;
+
+$(document).ready(function() {
+    if(localStorage.getItem('spinDate') !== new Date().toDateString()) {
+        localStorage.setItem('spinDate', new Date().toDateString());
+        localStorage.setItem('remainingSpins', dailySpins);
+    } else {
+        remainingSpins = localStorage.getItem('remainingSpins') || dailySpins;
+    }
+
+    $('.pointer').click(function() {
+        if (remainingSpins <= 0) {
+            alert("Refer more to earn spins!");
+            return;
+        }
+
+        // Define custom prize amounts (lower than 400)
+        var prizes = [
+            {name: "₹50", amount: 50},
+            {name: "₹100", amount: 100},
+            {name: "₹150", amount: 150},
+            {name: "₹200", amount: 200},
+            {name: "₹300", amount: 300}
+        ];
+
+        // Randomly select prize
+        var prizeIndex = Math.floor(Math.random() * prizes.length);
+        var prize = prizes[prizeIndex];
+
+        // Simulate the spin and show result
+        rotateFunc(prizeIndex, prize);
+
+        // Deduct a spin and save to localStorage
+        remainingSpins--;
+        localStorage.setItem('remainingSpins', remainingSpins);
+
+        // Update balance on UI
+        var currentBalance = parseFloat($('.balance').text()) || 0;
+        $('.balance').text((currentBalance + prize.amount).toFixed(2));
+    });
+});
+
+function rotateFunc(idx, prize) {
+    // Simulate the rotation and show result
+    var angle = idx * (360 / prizes.length) + 360 * 3;  // Example spin logic
+    $('#wheelCanvas').rotate({
+        angle: 0,
+        animateTo: angle,
+        duration: 3000,
+        callback: function() {
+            alert("Congratulations! You won " + prize.name);
+        }
+    });
+}
+
+</script></body>
+
+
+</html>
+
+
+
+
+make this game fully work for my new site

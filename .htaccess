@@ -1,0 +1,7 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/qlqgbxef/aladinkachirag.pro"
+PassengerBaseURI "/"
+PassengerNodejs "/home/qlqgbxef/nodevenv/aladinkachirag.pro/22/bin/node"
+PassengerAppType node
+PassengerStartupFile src/server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

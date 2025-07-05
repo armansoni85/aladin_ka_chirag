@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Online Game - Manual USDT</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+      integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      @font-face {
+        font-family: bahnschrift;
+        font-weight: 500;
+        src: url(/assets/woff2/bahnschrift-610d57ac.woff2);
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: bahnschrift;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: 100%;
+        width: 100%;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f0f0f5;
+        padding: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        margin: 15px 10px;
+      }
+
+      footer {
+        background-color: #f0f0f5;
+        padding: 6px;
+        text-align: center;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        margin: 0px 10px;
+        margin-top: auto;
+      }
+
+      .tutorial_root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f0f0f5;
+        padding: 0px 25px 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        margin: 15px 10px;
+      }
+
+      .tutorial_content p {
+        display: flex;
+        gap: 6px;
+      }
+
+      .tutorial_content p strong {
+        white-space: nowrap;
+      }
+
+      @media (min-width: 500px) {
+        .tutorial_root {
+          padding: 0px 20px 20px;
+        }
+      }
+
+      .upi_display_root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f0f0f5;
+        padding: 0px 25px 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        margin: 15px 10px;
+      }
+
+      .upi_display_root h2 {
+        margin: 20px 0px 5px;
+        font-weight: 600;
+      }
+
+      .upi_display_content {
+        margin-top: 10px;
+        padding: 0px 13px;
+        border-radius: 9px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .upi_display_content p {
+        display: flex;
+        gap: 6px;
+      }
+
+      .upi_display_content p strong {
+        white-space: nowrap;
+      }
+
+      .upi_display_content__img {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+
+      .verification_form__root {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        /* align-items: center; */
+        background: #f0f0f5;
+        padding: 10px 25px 25px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        margin: 15px 10px;
+      }
+
+      .verification_form__root label {
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      .verification_form__root input {
+        margin-top: 10px;
+        padding: 10px 13px;
+        border-radius: 9px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      .verification_form__root input::placeholder {
+        font-size: 14px;
+      }
+
+      .verification_form__root button {
+        margin-top: 10px;
+        padding: 10px;
+        user-select: none;
+        font: inherit;
+        color: #00af54;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.01333rem;
+        border: none;
+        border-radius: 99rem;
+        background: linear-gradient(131deg, #00af54 0%, #00af54 100%);
+      }
+
+      .upi_pay_now {
+        margin-top: 10px;
+        padding: 10px 15px;
+        border-radius: 9px;
+        border: 1px solid #ccc;
+        background-color: #1c4ff7;
+        background: linear-gradient(180deg, #ccf2f4 0%, #a4ebf3 100%);
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      /*  Digi copy css */
+      .msg {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        pointer-events: none;
+      }
+
+      .msg-content {
+        background-color: #4caf50; /* Success green */
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Enter animation */
+      .v-enter-active.v-enter-to {
+        animation: fadeIn 0.3s ease forwards;
+      }
+
+      /* Exit animation */
+      .v-leave-active.v-leave-to {
+        animation: fadeOut 0.3s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+      }
+
+      img,
+      input,
+      button {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+      }
+
+      #wallet_address_field {
+        word-break: break-all;
+        overflow-wrap: break-word;
+        white-space: normal;
+      }
+
+      /* ----------- */
+    </style>
+
+    <main>
+      <header>
+        <h2>Deposit</h2>
+      </header>
+
+      <!-- <div class="upi_display_root">
+        <h2 class="upi_display_title">Send <%=Amount%> USDT on</h2>
+        <img class="" src="/payment/usdt-trc20.jpg" alt="QR address" />
+        <button class="upi_display_content" id="copy_wallet_address_btn">
+          <p>
+            <strong>Wallet Address: </strong>
+            <span id="wallet_address_field"
+              >TGAAD9tT1erJUC7vf1PB73YjfJJJ2ZcjiW</span
+            >
+          </p>
+        </button>
+      </div> -->
+      <script>
+        const walletData = [
+          {
+            address: "TNr8uDbfZSEZGBSmsPwUEJuFcLG4iNnXh3",
+            image: "/payment/usdt-trc20-h3.jpg",
+            network: "TRC-20",
+          },
+          {
+            address: "0x204af7C877E37C19CcB0224D62D9D49FB76531c0",
+            image: "/payment/usdt-bep20-c0.jpg",
+            network: "BEP-20",
+          },
+          {
+            address: "TLcLYaVj4CRghHZ8L6QtrFn27i4VZKrxha",
+            image: "/payment/usdt-trc20-ha.jpg",
+            network: "TRC-20",
+          },
+          {
+            address: "0x29c2f9b92CBD5102067B2e1643881BfaCb8eFC06",
+            image: "/payment/usdt-bep20-06.jpg",
+            network: "BEP-20",
+          },
+        ];
+
+        // Convert EJS/Blade variable to JavaScript number
+        const requiredNt = "<%= networkType %>"; // If using Blade: {{ $networkType }}
+
+        // Filter wallets matching nt
+        const filteredWallets = walletData.filter(
+          (wallet) => wallet.network === requiredNt,
+        );
+
+        // Random wallet selection
+        const randomWallet =
+          filteredWallets[Math.floor(Math.random() * filteredWallets.length)];
+
+        window.onload = function () {
+          if (randomWallet) {
+            document.getElementById("wallet_address_field").textContent =
+              randomWallet.address;
+            document.getElementById("network").textContent =
+              randomWallet.network;
+            document.getElementById("wallet_qr_image").src = randomWallet.image;
+          } else {
+            console.error("No wallet found for network type =", requiredNt);
+          }
+        };
+      </script>
+
+      <div class="upi_display_root">
+        <h2 class="upi_display_title">Deposit <%= Amount %> USDT on</h2>
+        <div class="d-flex align-items-center">
+          <span class="me-2">Network:</span>
+          <span id="network"></span>
+        </div>
+
+        <img id="wallet_qr_image" class="" src="" alt="QR address" />
+        <button class="upi_display_content" id="copy_wallet_address_btn">
+          <p>
+            <strong>Wallet Address: </strong>
+            <span id="wallet_address_field"></span>
+          </p>
+        </button>
+      </div>
+
+      <form class="verification_form__root" action="submit.php" method="post">
+        <label for="ref_no">Reference No...</label>
+        <input
+          type="text"
+          minlength="60"
+          maxlength="70"
+          id="ref_no"
+          name="ref_no"
+          required
+          placeholder="Enter Your Reference No here..."
+        />
+        <button style="color: white" id="submit_button" type="submit">
+          Submit
+        </button>
+      </form>
+
+      <div class="tutorial_root">
+        <h3 class="tutorial_title">Step by Step Process</h3>
+        <div class="tutorial_content">
+          <p>
+            <strong>Step 1: </strong>
+            <span>
+              Open your USDT Wallet app and click on the "Send USDT" option.
+            </span>
+          </p>
+          <p>
+            <strong>Step 2:</strong>
+            <span>
+              Enter our Wallet address as a receiver and the amount you want to
+              send.
+            </span>
+          </p>
+          <p>
+            <strong>Step 3:</strong>
+            <span>
+              Click on the "Send" button to complete the transaction.
+            </span>
+          </p>
+          <p>
+            <strong>Step 4:</strong>
+            <span>
+              Copy the Reference No. and paste it in our Reference No field
+            </span>
+          </p>
+          <p>
+            <strong>Step 5:</strong>
+            <span> Click on the "Submit" button to complete the process. </span>
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <p></p>
+      </footer>
+    </main>
+
+    <script>
+      const alertMessage = (text) => {
+        const msg = document.createElement("div");
+        msg.setAttribute("data-v-1dcba851", "");
+        msg.className = "msg";
+
+        const msgContent = document.createElement("div");
+        msgContent.setAttribute("data-v-1dcba851", "");
+        msgContent.className = "msg-content v-enter-active v-enter-to";
+        msgContent.style = "";
+        msgContent.textContent = text;
+
+        msg.appendChild(msgContent);
+        document.body.appendChild(msg);
+
+        setTimeout(() => {
+          msgContent.classList.remove("v-enter-active", "v-enter-to");
+          msgContent.classList.add("v-leave-active", "v-leave-to");
+
+          setTimeout(() => {
+            document.body.removeChild(msg);
+          }, 100);
+        }, 1000);
+      };
+
+      const copyUpiId = document.getElementById("copy_wallet_address_btn");
+
+      copyUpiId.addEventListener("click", async function () {
+        try {
+          let upi_id = document.getElementById(
+            "wallet_address_field",
+          ).innerText;
+          await navigator.clipboard.writeText(upi_id);
+          alertMessage("Wallet address copied.");
+        } catch (err) {
+          console.error("Failed to copy:", err);
+          alertMessage("Failed to copy address.");
+        }
+      });
+
+      const submitButton = document.getElementById("submit_button");
+      submitButton.addEventListener("click", async (event) => {
+        try {
+          event.preventDefault();
+          const refNo = document.getElementById("ref_no").value;
+          const amount = "<%=Amount%>";
+          const networkType = "<%=networkType%>";
+          const upi_id = document.getElementById(
+            "wallet_address_field",
+          ).innerText;
+
+          if (refNo.length < 60 || refNo.length > 70) {
+            alertMessage("Invalid Reference No...");
+            return;
+          }
+          console.log(refNo.length);
+          const response = await axios.post(
+            "/wallet/paynow/manual_usdt_request",
+            {
+              money: amount,
+              utr: refNo,
+              upi_id: upi_id,
+              networkType: networkType,
+            },
+          );
+
+          if (!response?.data) {
+            alertMessage("Something went Wrong!");
+            return;
+          }
+
+          if (response?.data?.status === false) {
+            alertMessage(response?.data?.message);
+            return;
+          }
+
+          alertMessage(response?.data?.message);
+
+          window.location.href = "/wallet/rechargerecord";
+        } catch (error) {
+          console.log(error);
+          alertMessage("Something went Wrong!");
+        }
+      });
+    </script>
+  </body>
+</html>

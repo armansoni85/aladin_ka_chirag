@@ -1,0 +1,360 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f0f2f5 !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  min-height: 100vh;
+}
+
+.maincontent {
+  min-height: calc(100vh - 2rem);
+  background-color: #fff;
+}
+
+.header {
+  border-bottom: 2px solid transparent;
+  background-color: #fff;
+}
+
+.header .content {
+  padding: 1rem 1rem 0rem 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.header .content span {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Space Grotesk;
+}
+
+.header .info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: #fff;
+  font-style: normal;
+}
+
+.header .countdown {
+  font-weight: 500;
+  color: black;
+  font-family: Space Grotesk;
+  width: 60px;
+}
+
+.indiasvg {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.3rem;
+}
+
+.container {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.utrback .card {
+  padding: 5px;
+}
+
+.utrback .col-12 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #707070;
+  font-style: normal;
+  font-size: 0.8rem !important;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #707070;
+  font-style: normal;
+  font-size: 0.8rem !important;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: #707070;
+  font-style: normal;
+  font-size: 0.8rem !important;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: #707070;
+  font-style: normal;
+  font-size: 0.8rem !important;
+}
+.form-control::placeholder {
+  color: #bfbfbf;
+  font-style: normal;
+  font-size: 1rem !important;
+}
+
+.info .amount {
+  display: flex;
+  align-items: center;
+}
+
+.footerStyle {
+  /* position: fixed;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem; */
+  font-size: 0.8rem;
+  width: 100%;
+}
+.accordion .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qrcode {
+  display: flex;
+  justify-content: center;
+}
+.qrcode img {
+  border: 1px solid #bec4ca;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.title {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: Space Grotesk;
+}
+.toptext {
+  color: #eb7100;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.text-red {
+  color: #ff0000;
+  font-family: Space Grotesk;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.d-flex {
+  padding: 0.25rem;
+  border: 1px solid #bec4ca;
+}
+
+.not-border-top {
+  border-top: none;
+}
+
+.toast_box {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.toast_box p {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: max-content;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 6px;
+  opacity: 0.7;
+}
+
+.loadingico {
+  background-repeat: no-repeat;
+  height: 8rem;
+  width: 8rem;
+  background-image: url("../image/UPI.svg");
+  background-size: 8rem 8rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.loading {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent;
+  border-top-color: #2b82e0;
+  background-color: unset !important;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-gpay,
+.icon-paytm,
+.icon-phonepe,
+.icon-upi {
+  background-size: 5rem 3rem;
+  background-repeat: no-repeat;
+  height: 3rem;
+  width: 5rem;
+}
+
+.icon-gpay {
+  background-image: url("../image/wakup_gpay.svg");
+  background-size: 4rem 3rem;
+}
+
+.icon-paytm {
+  background-image: url("../image/Paytm_Logo.svg");
+}
+
+.icon-phonepe {
+  background-image: url("../image/wakup_phonepe.svg");
+}
+
+.icon-upi {
+  background-image: url("../image/UPI.svg");
+  background-size: 4rem 3rem;
+}
+
+.payitem {
+  display: flex !important;
+  padding: 0.2rem 0.5rem;
+  border-bottom: 1px solid #b2acac;
+}
+
+Button[type="submit"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.submitUtr {
+  height: 2.4rem !important;
+  width: 5rem !important;
+  border-radius: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff !important;
+  background-color: #3aa0fa !important;
+  border: 2px solid #3aa0fa !important;
+  border-radius: 0.8rem;
+}
+
+.utrinput::placeholder {
+  font-size: 1rem; 
+}
+
+
+
+
+.submitUtr.active {
+  font-size: 0 !important;
+  border-radius: 1.5rem !important;
+  width: 2.4rem !important;
+  background: transparent !important;
+}
+
+Button[type="submit"] {
+  height: 2rem;
+  width: 5rem;
+  background: transparent;
+  border-radius: 1.5rem;
+  will-change: transform;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  text-align: center;
+  
+}
+
+Button[type="submit"].active {
+  font-size: 0;
+  border-radius: 1.5rem;
+  width: 2rem;
+  background: transparent;
+}
+Button[type="submit"].loader {
+  border-right: 2px solid #ffffff !important;
+  -webkit-animation: loader 0.6s linear infinite;
+  animation: loader 0.6s linear infinite;
+}
+Button[type="submit"].success {
+  background: #3bb873 !important;
+  border-color: #3bb873 !important;
+  font-size: 1rem;
+  color: #ffffff;
+}
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}

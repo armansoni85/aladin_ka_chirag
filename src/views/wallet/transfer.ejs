@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html translate="no" data-dpr="1" style="font-size: 37.16px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <title>Online Game - Transfer</title>
+    <link rel="stylesheet" href="./index_files/index-96409872.css">
+    <link rel="stylesheet" href="../index_files/index-96409872.css">
+    <link href="/css/wallet/main.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-1.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-2.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-3.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="modulepreload" crossorigin="" href="/assets/js/vi-60d1c3eb.js" />
+    <link rel="stylesheet" href="/assets/css/modules-8b01ca49.css" />
+    <link rel="stylesheet" href="/assets/css/page-activity-9da3f4e3.css" />
+    <link rel="stylesheet" href="/assets/css/page-home-482c7bbf.css" />
+    <link rel="stylesheet" href="/assets/css/index-8560823f.css" />
+    <link rel="stylesheet" href="/assets/css/reset-910da13b.css" />
+    <link rel="stylesheet" href="/assets/css/page-login-5dee7998.css" />
+    <link rel="stylesheet" href="/assets/css/page-main-b60516e4.css" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #090909;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mian .wallet-box .box .balance[data-v-7b283485] {
+            /* background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%) !important; */
+            box-shadow: 1px 1rem 3rem #b180547d !important;
+            background: linear-gradient(90deg, #ff004d 0%, #00AF54 100%);
+
+        }
+
+
+        .mian .wallet-user[data-v-7b283485] {
+            background: linear-gradient(90deg, #ff004d 0%, #00AF54 100%);
+        }
+
+        .van-row {
+            display: -webkit-box !important;
+            display: -webkit-flex !important;
+            display: flex !important;
+            -webkit-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+        }
+
+        .navbar[data-v-106b99c8] {
+            background: linear-gradient(90deg, #ff004d 0%, #00AF54 100%);
+        }
+
+
+        .c-tc {
+            text-align: center;
+            color: #0a1846;
+        }
+
+        .reload_img {
+            filter: brightness(6.5);
+        }
+    </style>
+</head>
+
+<body style="font-size: 12px;">
+    <div id="app">
+        <div data-v-7b283485="" class="mian">
+            <div data-v-106b99c8="" data-v-7b283485="" class="navbar">
+                <div data-v-19888208="" class="navbar__content-left" onclick="history.back()">
+                    <i data-v-19888208="" class="van-badge__wrapper van-icon van-icon-arrow-left">
+                    </i>
+                </div>
+                <div data-v-106b99c8="" class="navbar-title"> Fund Transfer </div>
+                <div data-v-106b99c8="" class="navbar-right" onclick="location.href='/keFuMenu'">
+                    <div data-v-7b283485="" data-v-106b99c8="" class="c-row">
+                        <i class="fa-fade fa center" style="color: #FFF">
+                            <img data-v-7b283485="" data-v-106b99c8="" src="/images/audio.webp" class="audio">
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div data-v-7b283485="" class="wallet">
+                <div data-v-7b283485="" class="wallet-user c-tc">
+                    <div data-v-7b283485="" class="c-row c-row-center img">
+                        <div data-v-7b283485="" class="van-image" border-radius="60px"
+                            style="width: 60px; height: 60px;">
+                            <img src="/images/avatar.svg" class="van-image__img">
+                        </div>
+                    </div>
+                    <div data-v-7b283485="" class="name"></div>
+                </div>
+                <div data-v-7b283485="" class="wallet-box">
+                    <div data-v-7b283485="" class="box">
+                        <div data-v-7b283485="" class="icon1"></div>
+                        <div data-v-7b283485="" class="title">Fund Transfer</div>
+                        <div data-v-7b283485="" class="balance m-t-10">
+                            <div data-v-7b283485="" class="txt c-row c-row-middle">
+                                <img data-v-7b283485="" width="22px" height="18px" src="/images/king (2).png"
+                                    class="m-r-5 img"> My balance:
+                            </div>
+                            <div data-v-7b283485="" class="c-row balanceMoney c-row-middle-center">
+                                <div data-v-7b283485="" class="money">
+                                    <!---->
+                                    <div data-v-7b283485="">₹<span data-v-7b283485="" class="p-l-10">Loading...</span>
+                                    </div>
+                                </div>
+                                <div data-v-7b283485="" id="reload">
+                                    <div data-v-7b283485="" class="van-image img m-l-15"
+                                        style="width: 25px; height: 25px;">
+                                        <img src="/images/reload.png" class="van-image__img reload_img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-7b283485="" class="info c-row">
+                                <div data-v-7b283485="" class="item">
+                                    <div data-v-7b283485="">Total Recharge</div>
+                                    <!---->
+                                    <div data-v-7b283485="">₹ 0.00</div>
+                                </div>
+                                <div data-v-7b283485="" class="item">
+                                    <div data-v-7b283485="">Total Withdrawal</div>
+                                    <!---->
+                                    <div data-v-7b283485="">₹ 0.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-v-a0753f48="" class="mian-from">
+                            <div data-v-a0753f48="" class="lab">
+                                <span data-v-a0753f48=""> </span>
+                            </div>
+                            <!-- <div data-v-a0753f48="" class="item c-row c-row-center first">
+                                <div data-v-a0753f48="" class="c-row number">
+                                    <span data-v-a0753f48="" class="c-row c-row-middle-center">
+                                        <img data-v-a0753f48=""
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGDSURBVHgB7ZnNTcNAEIXfOOGeEuiAcEFEuVBCJILELXEF0EGcDqAChxtS0gO+QMTNVID7IHgY83Mju4uyzghpPsmnfWvN8/5YmgcYxk5QqPAxv+h3iCcM9NEiUlDJ3L0dpPdVoN7P8914VjMy7BNCNpis5n6ZB5Xifwgw4TSwzi8PQZtXKNJhOj5Jl+W28cQ1mfF2DWU2qKeucacBIjqCMr4anAb+A2ZAGzOgjRnQxgxoYwa0MQPamAFtzIA2ZsDYEWdb5Sk/HxGSHlThapCuim2jXcfMpiNwJS84gy7F9/Mrdoi16SIuhWy8yiWQ7naPwCNEIpoBAi1Op8s0RLvOxwuZMEEEom2hmvklVCurUCIS8VZAbiz5st7CEnCv/rrdEIOIZ4ClFY8Hn6r+/PXEKb7BrlFt3AHHHw5mW/hq8CQ0yQLKEA5uXONOA8Mmm2J4k8K2kHBx7otbg2JWuR4zUc6wR5rih+kq8+mCg+4msSQJ/bjl3Ixkz7/L1h06kknDiMgH3mlqrSokw/4AAAAASUVORK5CYII="
+                                            class="mobile" style="height: 0.53333rem; width: 0.53333rem">
+                                    </span>
+                                    <div data-v-a0753f48="" class="p-l-5">+91</div>
+                                </div>
+                                <input data-v-a0753f48="" maxlength="16" type="text" placeholder="Phone Number"
+                                    style="background: #ffffff; outline: none">
+                            </div> -->
+                            <div data-v-bef9bff8="" data-v-bba3a451="" class="phoneInput__container">
+                                <div data-v-bef9bff8="" class="phoneInput__container-label"><img data-v-bef9bff8=""
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGTSURBVHgB7dk/SgNBFAbw781sQLuAbYRcQOy1CdpGTNJosBBPEGv/YEQR0nmErRIt4gpaCtkjJHiBFLa2omBm3BUsMzua2TyE+TUp3gt5HzOzG3YBz5sJ2Tb2O42SfF9cJ6FKyJFW4kUV3p4aR9GrTb9VgPvL5haBqpgjPdGPtbPeQ1ZfZgCO4X/YhBCm4t1VfYlr+BRJqvY7e8YtawwQfC5sglnhQ62Z6sYAmsQymJHA31fgP/ABuPkA3HwAbj4ANx+Amw/AzQfg5gNw8wG8GRmfC0XtZg2CiuCk1LjevomnlQPTd6UULQ1dASMtKU4+4ml1f4i5BXAo2W6xIBpnNBU1UIMjzgIQIdw+6R3Y9EYXzVCA9uGAsy00UXpk3awxhCPOViDZOq2ovWsxGBXTXjji8gyUhRQDzJm/jHIzBvjVwcyJVjDOYF6BACG4aX1tKhsD1I+7QwWcg0n628kfubGpRyLD7eA53tlYSe5TqGCOvoc/7baz+qxfdCfX+HJyuz2UQqwiRxOlRggoTFcfnpe/L1X8Z946wW7eAAAAAElFTkSuQmCC"
+                                        class="phoneInput__container-label__icon" /><span data-v-bef9bff8="">Phone
+                                        number</span>
+                                </div>
+                                <div data-v-bef9bff8="" class="phoneInput__container-input">
+                                    <div data-v-482b13c8="" data-v-bef9bff8="" class="dropdown">
+                                        <div data-v-482b13c8="" class="dropdown__value">
+                                            <span data-v-482b13c8="">+91</span><i data-v-482b13c8=""
+                                                class="van-badge__wrapper van-icon van-icon-arrow-down"><!----><!----><!----></i>
+                                        </div>
+                                        <div data-v-482b13c8="" class="dropdown__list">
+                                            <div data-v-482b13c8="" class="dropdown__list-item active">
+                                                <span data-v-482b13c8="">+91</span> India
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input maxlength="10" id="phone_number_inp" data-v-bef9bff8="" type="text"
+                                        name="userNumber" placeholder="Please enter the phone number" />
+                                </div>
+                            </div>
+
+                            <!-- <div data-v-a0753f48="" class="item c-row c-row-center">
+                                <span data-v-a0753f48="" class="img c-row c-row-middle-center">
+                                    <img data-v-a0753f48="" src="/images/wallet2.png" class="" width="20" height="20" />
+                                </span>
+                                <input data-v-d8986e5e="" data-v-a0753f48="" placeholder="Enter Amount"
+                                    style="background: #ffffff; outline: none">
+                            </div> -->
+
+                            <div data-v-b59c95a7="" data-v-bba3a451="" class="passwordInput__container">
+                                <div data-v-b59c95a7="" class="passwordInput__container-label">
+                                    <img data-v-b59c95a7="" class="passwordInput__container-label__icon"
+                                        style="filter: contrast(0.35) hue-rotate(-6deg) saturate(2); scale: 0.9;"
+                                        src="/images/wallet2.png" />
+                                    <span data-v-b59c95a7="">Amount</span>
+                                </div>
+                                <div data-v-b59c95a7="" class="passwordInput__container-input">
+                                    <input id="amount_inp" data-v-b59c95a7="" type="text" placeholder="Amount" />
+                                </div>
+                            </div>
+
+                            <div data-v-b59c95a7="" data-v-bba3a451="" class="passwordInput__container">
+                                <div data-v-b59c95a7="" class="passwordInput__container-label"><img data-v-b59c95a7=""
+                                        class="passwordInput__container-label__icon"
+                                        data-origin="https://bigmumbai3.com/assets/png/pwd-9a974e76.png"
+                                        src="https://bigmumbai3.com/assets/png/pwd-9a974e76.png" /><span
+                                        data-v-b59c95a7="">Password</span></div>
+                                <div data-v-b59c95a7="" class="passwordInput__container-input"><input id="password_inp"
+                                        data-v-b59c95a7="" type="password" placeholder="Password" maxlength="32"
+                                        autocomplete="new-password" /><img id="password_eye_btn" data-v-b59c95a7=""
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAP1BMVEUAAADExMTExMTDw8PExMTFxcXFxcXExMS/v7/FxcXFxcXExMTExMTDw8PExMTFxcXFxcXExMTPz8+/v7/ExMTkagEbAAAAFHRSTlMAIO/ff29fvxDfMD/PoI+fr1AQMBwdwB4AAAFQSURBVDjL5ZJbkoQgDEXDI4iAqN3sf61DIEFHqmvmv/OhEE5ycwvgm0Il+z9uLQU/HJ0OrTvD4IqdoZdbdOHQh+sczphlSmKlvZu4uPZG2bkqfnDRzFlKL/FKuM9cig+/OoLCmcs8Au7ZqUDcG4IW00OGE2Fh040D/G1baeFO8mDo07gmpdUAa5djVGQPgej3OFtuwqZX7U3o1C0RmjevL+/rWLZqVzqnyV0bc70atgVJInPUaR/ip5TkATrmIBYBd3Gq6pGSVWpc18mPY9jYGKk0jgeP0nCjPxtDTgpnZXDkjGy0kgv3AK+4FG6opMmQXJVwob8wK0/jgCu8qWS+c/oU7hJumUqyrl2MOdDLzd85maVs/p6iQScOMnG1HcYXANlBwsriH9zWua2NZ4zmR8l+Jy6Ycotk/czJfQU8kqmRdgwwhU9y7X+F3yx8VfwAZv4b1F/KTEQAAAAASUVORK5CYII="
+                                        class="eye" /></div>
+                            </div>
+
+                            <div data-v-a0753f48="" class="mian-btn">
+                                <button data-v-a0753f48="" id="send_money"
+                                    class="gradient van-button van-button--default van-button--normal van-button--block van-button--round">
+                                    <div data-v-a0753f48="" class="van-button__content">
+                                        <span data-v-a0753f48="" class="van-button__text">
+                                            <span data-v-a0753f48="">Send Money</span>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+
+
+                            <div class="alert-toast"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div data-v-7c8bbbf4="" class="promotion">
+                    <div data-v-7c8bbbf4="" class="box">
+                        <div data-v-7c8bbbf4="" class="tit c-row c-row-between">Transferred Balance</div>
+                        <div data-v-7c8bbbf4="" class="table">
+                            <div data-v-7c8bbbf4="" class="hd van-row">
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">Phone number</div>
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">Amount</div>
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">Status</div>
+                            </div>
+                            <div class="bd van-row2 lisys">
+                                <!-- Transaction history data will be dynamically populated here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="promotion">
+                        <div data-v-7c8bbbf4="" class="box">
+                            <div data-v-7c8bbbf4="" class="tit c-row c-row-between">Received Balance</div>
+                            <div data-v-7c8bbbf4="" class="table">
+                                <div data-v-7c8bbbf4="" class="hd van-row">
+                                    <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">Phone number
+                                    </div>
+                                    <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">Amount</div>
+                                    <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">Date</div>
+                                </div>
+                                <div class="bd van-row lisys-r">
+                                    <!-- Transaction history data will be dynamically populated here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-v-3966082f="" class="box">
+                    <div data-v-3966082f="" class="list m-b-20">
+                        <div data-v-3966082f="" role="feed" class="van-list">
+                            <div class="lisys">
+
+                            </div>
+                            <div data-v-a9660e98="" class="p-t-5 p-b-5">
+                                <div data-v-a9660e98="" class="van-empty">
+                                    <div class="van-empty__image">
+                                        <img src="/images/empty-image-default.png" />
+                                    </div>
+                                    <div class="van-list__finished-text">No more Available</div>
+                                    <div class="van-list__placeholder"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/client.js"></script>
+
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "/api/webapi/GetUserInfo",
+            dataType: "json",
+            success: function (response) {
+                let user = response.data;
+                $('.wallet-user .name').text(user.name_user);
+                $('.money').text("₹" + user.money_user);
+                $('.balance .item:eq(0) div:eq(1)').text("₹" + response.totalRecharge + ".00");
+                $('.balance .item:eq(1) div:eq(1)').text("₹" + response.totalWithdraw + ".00");
+            }
+        });
+
+        $("#reload").click(
+            function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/api/webapi/GetUserInfo",
+                    dataType: "json",
+                    success: function (response) {
+                        let user = response.data;
+                        $('.money').text("₹" + user.money_user);
+                        $('.balance .item:eq(0) div:eq(1)').text("₹" + response.totalRecharge + ".00");
+                        $('.balance .item:eq(1) div:eq(1)').text("₹" + response.totalWithdraw + ".00");
+                    }
+                });
+            }
+        )
+
+        function alertMess(text) {
+            let length = $('.alert-toast .msg').length;
+            if (length == 0) {
+                $('.alert-toast').append(
+                    `
+                    <div data-v-1dcba851="" class="msg">
+                        <div data-v-1dcba851="" class="msg-content"  > ${text} </div>
+                    </div>
+                    `
+                );
+                setTimeout(() => {
+                    $('.msg').fadeOut();
+                    setTimeout(() => {
+                        $('.alert-toast .msg').remove();
+                    }, 100);
+                }, 1500);
+            }
+        }
+
+        function validateForm(dialCode, phoneNumber, amount, password, text) {
+            if (!dialCode || !phoneNumber || !amount || !password) {
+                alertMess(text);
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        $('#send_money').click(async (e) => {
+            e.preventDefault();
+            let phoneNumber = $("#phone_number_inp").val().trim()
+            let password = $("#password_inp").val().trim()
+            let amount = $("#amount_inp").val().trim()
+            let dialCode = $('.dropdown__value span').text().trim()
+
+            let status = validateForm(dialCode, phoneNumber, amount, password, 'Please fill in the necessary part.');
+
+            if (status) {
+                $('.van-overlay').fadeIn(10);
+                $.ajax({
+                    type: "POST",
+                    url: "/api/wallet_transfer",
+                    data: {
+                        dialCode: dialCode,
+                        phone: phoneNumber,
+                        amount: amount,
+                        password: password,
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        alertMess(response.message);
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/api/webapi/transfer_history",
+                            dataType: "json",
+                            success: function (response) {
+                                if (response.status === true) {
+                                    loadTransactionHistory(response.datas);
+                                }
+                            }
+                        });
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/api/webapi/GetUserInfo",
+                            dataType: "json",
+                            success: function (response) {
+                                let user = response.data;
+                                $('.wallet-user .name').text(user.name_user);
+                                $('.money').text("₹" + user.money_user);
+                                $('.balance .item:eq(0) div:eq(1)').text("₹" + response.totalRecharge + ".00");
+                                $('.balance .item:eq(1) div:eq(1)').text("₹" + response.totalWithdraw + ".00");
+                            }
+                        });
+                    },
+                    error: function (response) {
+                        alertMess(response.data.message);
+                    }
+                });
+            }
+
+        });
+
+        function loadTransactionHistory(datas) {
+            let html = datas.map((data) => {
+                return `
+                            <div data-v-7c8bbbf4="" class="bd van-row">
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">${data.receiver_phone}</div> 
+                                <div data-v-7c8bbbf4="" class="c-tc van-col van-col--8">${data.amount}</div>
+                                <div data-v-7c8bbbf4="" class="c-tc van-col van-col--8">${data.datetime.slice(0, 10)}</div>
+                            </div>
+                        `;
+            }).join('');
+
+            $('.promotion .bd.lisys').html(html);
+        }
+
+        $.ajax({
+            type: "GET",
+            url: "/api/webapi/transfer_history",
+            dataType: "json",
+            success: function (response) {
+                if (response.status === true) {
+                    loadTransactionHistory(response.datas);
+                }
+            }
+        });
+
+        function loadTransactionReceiveHistory(receive) {
+            let html = receive.map((r_data) => {
+                return `
+            <div data-v-7c8bbbf4="" class="bd van-row">
+                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--8">${r_data.sender_phone}</div>
+                <div data-v-7c8bbbf4="" class="c-tc van-col van-col--8">${r_data.amount}</div>
+                <div data-v-7c8bbbf4="" class="c-tc van-col van-col--8">${r_data.datetime.slice(0, 10)}</div>
+            </div>
+            `;
+            }).join('');
+
+            $('.promotion .bd.lisys-r').html(html);
+        }
+
+        $.ajax({
+            type: "GET",
+            url: "/api/webapi/transfer_history",
+            dataType: "json",
+            success: function (response) {
+                if (response.status === true) {
+
+                    loadTransactionReceiveHistory(response.receive);
+                }
+
+            }
+        });
+
+
+        $('.dropdown').click(function () {
+            $('.dropdown__list').css("opacity", $('.dropdown__list').css("opacity") === "1" ? "0" : "1");
+            $('.dropdown__list').css("height", $('.dropdown__list').css("opacity") === "1" ? ".2rem" : "6rem");
+        });
+
+        const setDialCode = (dialCode) => {
+            $('.dropdown__value span').text(dialCode);
+            $('.dropdown__list-item').removeClass('active');
+            $(`.dropdown__list-item .dial_code:contains(${dialCode})`).parent().addClass('active');
+        };
+
+
+        $.ajax({
+            url: "/country_codes.json",
+            method: "GET",
+            success: function (response) {
+                // Handle success response
+
+                const html = response.map((country) => {
+                    return `
+                     <div data-v-482b13c8="" class="dropdown__list-item" onclick="setDialCode('${country.dial_code}')">
+                        <span data-v-482b13c8="" class="dial_code">${country.dial_code}</span>
+                        ${country.name}
+                     </div>`;
+                }).join('');
+
+                $('.dropdown__list').html(html);
+
+                setDialCode("+91");
+            },
+            error: function (xhr, status, error) {
+                // Handle error response
+            }
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
