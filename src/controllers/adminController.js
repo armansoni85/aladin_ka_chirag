@@ -183,55 +183,61 @@ const totalJoin = async (req, res) => {
 
 const listMember = async (req, res) => {
   let { pageno, limit, search } = req.body;
-  
-  // Convert to integers and validate
-  pageno = parseInt(pageno, 10);
-  limit = parseInt(limit, 10);
   const offset = (pageno - 1) * limit;
 
-  if (isNaN(pageno) || isNaN(limit) || pageno < 1 || limit < 1) {
-    return res.status(400).json({
-      status: false,
-      message: "Invalid pagination parameters"
-    });
-  }
-
-  try {
-    let baseQuery = "SELECT * FROM users WHERE veri = 1 AND level != 2";
-    let countQuery = "SELECT COUNT(*) AS total FROM users WHERE veri = 1 AND level != 2";
-    let params = [];
-    let countParams = [];
-
-    if (search) {
-      const searchTerm = `%${search}%`;
-      baseQuery += " AND (phone LIKE ? OR id_user LIKE ?)";
-      countQuery += " AND (phone LIKE ? OR id_user LIKE ?)";
-      params.push(searchTerm, searchTerm);
-      countParams.push(searchTerm, searchTerm);
-    }
-
-    baseQuery += " ORDER BY id DESC LIMIT ? OFFSET ?";
-    params.push(limit, offset);
-
-    // Execute queries with proper parameters
-    const [users] = await connection.execute(baseQuery, params);
-    const [[countResult]] = await connection.execute(countQuery, countParams);
-    const total = countResult.total;
-
+  if (!pageno || !limit) {
     return res.status(200).json({
-      status: true,
-      datas: users,
-      currentPage: pageno,
-      page_total: Math.ceil(total / limit),
-      total_records: total
-    });
-  } catch (error) {
-    console.error("Database error in listMember:", error);
-    return res.status(500).json({
+      code: 0,
+      msg: "No more data",
+      data: {
+        gameslist: [],
+      },
       status: false,
-      message: "Database error"
     });
   }
+
+  if (pageno < 0 || limit < 0) {
+    return res.status(200).json({
+      code: 0,
+      msg: "No more data",
+      data: {
+        gameslist: [],
+      },
+      status: false,
+    });
+  }
+
+  let sql = "SELECT * FROM users WHERE veri = 1 AND level != 2";
+  let countSql =
+    "SELECT COUNT(*) as total FROM users WHERE veri = 1 AND level != 2";
+  let params = [];
+
+  if (search) {
+    sql += " AND (phone LIKE ? OR id_user LIKE ?)";
+    countSql += " AND (phone LIKE ? OR phone LIKE ?)";
+    params = [`%${search}%`, `%${search}%`];
+  }
+
+  sql += " ORDER BY id DESC LIMIT ? OFFSET ?";
+  params.push(limit, offset);
+
+  // Execute the query to fetch users
+  const [users] = await connection.execute(sql, params);
+
+  const [total_users] = await connection.query(countSql, params.slice(0, -2));
+
+  // const [users] = await connection.execute(
+  //    "SELECT * FROM users WHERE veri = 1 AND level != 2 ORDER BY id DESC LIMIT ? OFFSET ?",
+  //    [limit, offset]
+  //  );
+  //  const [total_users] = await connection.query(`SELECT * FROM users WHERE veri = 1 AND level != 2`)
+  return res.status(200).json({
+    message: "Success",
+    status: true,
+    datas: users,
+    currentPage: pageno,
+    page_total: Math.ceil(total_users[0].total / limit),
+  });
 };
 
 const listCommission = async (req, res) => {
