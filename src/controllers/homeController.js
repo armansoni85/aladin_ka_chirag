@@ -152,6 +152,10 @@ const promotionDesPage = async (req, res) => {
   return res.render("promotion/promotionDes.ejs");
 };
 
+const salaryDesPage = async (req, res) => {
+  return res.render("promotion/salaryDes.ejs");
+};
+
 const comhistoryPage = async (req, res) => {
   return res.render("promotion/comhistory.ejs");
 };
@@ -486,6 +490,7 @@ const homeController = {
   myProfilePage,
   promotionmyTeamPage,
   promotionDesPage,
+  salaryDesPage, 
   comhistoryPage,
   tutorialPage,
   bonusRecordPage,

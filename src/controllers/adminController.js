@@ -54,6 +54,11 @@ const membersPage = async (req, res) => {
 const commissionPage = async (req, res) => {
   return res.render("manage/commission.ejs");
 };
+
+const salaryPage = async (req, res) => {
+  return res.render("manage/salary.ejs");
+};
+
 const ctvPage = async (req, res) => {
   return res.render("manage/ctv.ejs");
 };
@@ -81,6 +86,10 @@ const withdraw = async (req, res) => {
 
 const levelSetting = async (req, res) => {
   return res.render("manage/levelSetting.ejs");
+};
+
+const salaryLevelSetting = async (req, res) => {
+  return res.render("manage/salarylevelSetting.ejs");
 };
 
 const CreatedSalaryRecord = async (req, res) => {
@@ -297,6 +306,58 @@ const listCommission = async (req, res) => {
     currentPage: pageno,
     page_total: Math.ceil(total_users[0].total / limit),
   });
+};
+
+const listSalaryIncome = async (req, res) => {
+  let { pageno, limit, search } = req.body;
+
+  if (!pageno || !limit || pageno < 1 || limit < 1) {
+    return res.status(200).json({
+      code: 0,
+      msg: "No more data",
+      data: {
+        gameslist: [],
+      },
+      status: false,
+    });
+  }
+
+  const offset = (pageno - 1) * limit;
+
+  let sql = "SELECT * FROM payouts WHERE income_type = 'salary'";
+  let countSql = "SELECT COUNT(*) AS total FROM payouts WHERE income_type = 'salary'";
+  let params = [];
+  let countParams = [];
+
+  if (search) {
+    sql += " AND (user_phone LIKE ? OR id LIKE ?)";
+    countSql += " AND (user_phone LIKE ? OR id LIKE ?)";
+    params.push(`%${search}%`, `%${search}%`);
+    countParams.push(`%${search}%`, `%${search}%`);
+  }
+
+  sql += " ORDER BY id DESC LIMIT ? OFFSET ?";
+  params.push(parseInt(limit), parseInt(offset));
+
+  try {
+    const [users] = await connection.execute(sql, params);
+    const [totalRows] = await connection.execute(countSql, countParams);
+    const total = totalRows[0].total;
+
+    return res.status(200).json({
+      message: "Success",
+      status: true,
+      datas: users,
+      currentPage: parseInt(pageno),
+      page_total: Math.ceil(total / limit),
+    });
+  } catch (error) {
+    console.error("Error fetching salary income:", error);
+    return res.status(500).json({
+      message: "Server Error",
+      status: false,
+    });
+  }
 };
 
 const listCTV = async (req, res) => {
@@ -945,6 +1006,38 @@ const updateLevel = async (req, res) => {
     await connection.query(
       "UPDATE `level` SET `f1`= ? ,`f2`= ? ,`f3`= ? ,`f4`= ?  WHERE `id` = ?",
       [f1, f2, f3, f4, id],
+    );
+
+    // Send a success response to the client
+    res.status(200).json({
+      message: "Update successful",
+      status: true,
+    });
+  } catch (error) {
+    console.error("Error updating level:", error);
+
+    // Send an error response to the client
+    res.status(500).json({
+      message: "Update failed",
+      status: false,
+      error: error.message,
+    });
+  }
+};
+
+const updateSalaryLevel = async (req, res) => {
+  try {
+    let id = req.body.id;
+    let title = req.body.title;
+    let team = req.body.team;
+    let daily_deposite = req.body.daily_deposite;
+    let salary = req.body.salary;
+
+    console.log("level : " + id, title, team, daily_deposite, salary);
+
+    await connection.query(
+      "UPDATE `salary_level` SET `title`= ? ,`team`= ? ,`daily_deposite`= ? ,`salary`= ?  WHERE `id` = ?",
+      [title, team, daily_deposite, salary, id],
     );
 
     // Send a success response to the client
@@ -2172,6 +2265,27 @@ const listRedenvelope = async (req, res) => {
 };
 // Level Setting get
 
+const getSalaryLevelInfo = async (req, res) => {
+  const [rows] = await connection.query("SELECT * FROM `salary_level`");
+
+  if (!rows) {
+    return res.status(200).json({
+      message: "Failed",
+      status: false,
+    });
+  }
+  console.log("asdasdasd : " + rows);
+  return res.status(200).json({
+    message: "Success",
+    status: true,
+    data: {},
+    rows: rows,
+  });
+
+  
+};
+
+
 const getLevelInfo = async (req, res) => {
   const [rows] = await connection.query("SELECT * FROM `level`");
 
@@ -2863,8 +2977,10 @@ const adminController = {
   changeAdmin,
   membersPage,
   commissionPage,
+  salaryPage,
   listMember,
   listCommission,
+  listSalaryIncome,
   infoMember,
   userInfo,
   statistical,
@@ -2876,6 +2992,7 @@ const adminController = {
   withdrawRecord,
   withdraw,
   levelSetting,
+  salaryLevelSetting,
   handlWithdraw,
   settings,
   editResult2,
@@ -2897,6 +3014,7 @@ const adminController = {
   listRechargeMem,
   listWithdrawMem,
   getLevelInfo,
+  getSalaryLevelInfo,
   listRedenvelope,
   listBet,
   adminPage5d,
@@ -2912,6 +3030,7 @@ const adminController = {
   getSalary,
   fetchMemberDetails,
   updateMemberDetails,
+  updateSalaryLevel,
 };
 
 export default adminController;

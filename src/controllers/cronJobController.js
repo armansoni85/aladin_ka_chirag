@@ -2,6 +2,7 @@ import connection from "../config/connectDB.js";
 import winGoController from "./winGoController.js";
 import k5Controller from "./k5Controller.js";
 import k3Controller from "./k3Controller.js";
+import levelIncomeController from "./levelIncomeController.js";
 import trxWingoController, {
   TRX_WINGO_GAME_TYPE_MAP,
 } from "./trxWingoController.js";
@@ -10,6 +11,12 @@ import vipController from "./vipController.js";
 import gameController from "./gameController.js";
 
 const cronJobGame1p = (io) => {
+
+  cron.schedule("*/1 * * * *", async () => {
+    const result  = await levelIncomeController.getLevel();
+    // console.log(result);
+  });
+  
   cron.schedule("*/1 * * * *", async () => {
     await trxWingoController.addTrxWingo(1);
     await trxWingoController.handlingTrxWingo1P(1);

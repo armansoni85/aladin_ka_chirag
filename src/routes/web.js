@@ -217,6 +217,13 @@ const initWebRouter = (app) => {
     middlewareController,
     homeController.promotionDesPage,
   );
+
+  router.get(
+    "/promotion/salaryDes",
+    middlewareController,
+    homeController.salaryDesPage,
+  );
+
   router.get(
     "/promotion/comhistory",
     middlewareController,
@@ -708,6 +715,13 @@ const initWebRouter = (app) => {
   ); // register
 
   router.get(
+    "/api/webapi/listSalary",
+    middlewareController,
+    promotionController.listSalary,
+  ); // register
+
+
+  router.get(
     "/api/webapi/withdraw/",
     middlewareController,
     userController.listWithdraw,
@@ -997,6 +1011,12 @@ const initWebRouter = (app) => {
   );
 
   router.get(
+    "/admin/manager/salary",
+    adminController.middlewareAdminController,
+    adminController.salaryPage,
+  );
+
+  router.get(
     "/admin/manager/createBonus",
     adminController.middlewareAdminController,
     adminController.giftPage,
@@ -1100,6 +1120,13 @@ const initWebRouter = (app) => {
     adminController.middlewareAdminController,
     adminController.levelSetting,
   );
+
+  router.get(
+    "/admin/manager/salaryLevelSetting",
+    adminController.middlewareAdminController,
+    adminController.salaryLevelSetting,
+  );
+
   router.get(
     "/admin/manager/CreatedSalaryRecord",
     adminController.middlewareAdminController,
@@ -1135,6 +1162,13 @@ const initWebRouter = (app) => {
     adminController.middlewareAdminController,
     adminController.getLevelInfo,
   );
+
+  router.get(
+    "/api/webapi/admin/getSalaryLevelInfo",
+    // adminController.middlewareAdminController,
+    adminController.getSalaryLevelInfo,
+  );
+
   router.get(
     "/api/webapi/admin/getSalary",
     adminController.middlewareAdminController,
@@ -1152,6 +1186,14 @@ const initWebRouter = (app) => {
     adminController.middlewareAdminController,
     adminController.updateLevel,
   ); // get info account
+
+  router.post(
+    "/api/webapi/admin/updateSalaryLevel",
+    adminController.middlewareAdminController,
+    adminController.updateSalaryLevel,
+  ); // get info account
+
+
   router.post(
     "/api/webapi/admin/CreatedSalary",
     adminController.middlewareAdminController,
@@ -1167,6 +1209,12 @@ const initWebRouter = (app) => {
     "/api/webapi/admin/listCommission",
     adminController.middlewareAdminController,
     adminController.listCommission,
+  ); // get info account
+
+  router.post(
+    "/api/webapi/admin/listSalaryIncome",
+    adminController.middlewareAdminController,
+    adminController.listSalaryIncome,
   ); // get info account
 
   router.post(

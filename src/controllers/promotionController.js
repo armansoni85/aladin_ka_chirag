@@ -579,6 +579,104 @@ const listCommission = async (req, res) => {
 //    }
 // };
 
+const constructSalaryQuery = (startDate, endDate, phone, limit, offset) => {
+  const baseQuery = `
+    SELECT id, user_phone, level, income, income_type, created_at 
+    FROM payouts 
+    WHERE user_phone = ? AND created_at BETWEEN FROM_UNIXTIME(?) AND FROM_UNIXTIME(?)
+  `;
+
+  const countQuery = `
+    SELECT COUNT(*) AS totalCount 
+    FROM payouts 
+    WHERE user_phone = ? AND created_at BETWEEN FROM_UNIXTIME(?) AND FROM_UNIXTIME(?)
+  `;
+
+  const transactionsQuery = `
+    ${baseQuery}
+    ORDER BY created_at DESC
+    LIMIT ${limit} OFFSET ${offset}
+  `;
+
+  const params = [phone, startDate, endDate];
+
+  return {
+    transactionsQuery,
+    totalCountQuery: countQuery,
+    params,
+  };
+};
+
+const listSalary = async (req, res) => {
+  try {
+    const auth = req.cookies.auth;
+    if (!auth) {
+      return res.status(401).json({
+        status: false,
+        message: "Unauthorized",
+      });
+    }
+
+    const [userRows] = await connection.query(
+      "SELECT phone FROM users WHERE token = ?",
+      [auth]
+    );
+    const user = userRows[0];
+    if (!user) {
+      return res.status(401).json({
+        status: false,
+        message: "Invalid User",
+      });
+    }
+
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    // 🕒 Use current date if not provided
+    let startDateMs;
+    if (req.query.startDate) {
+      startDateMs = Number(req.query.startDate);
+    } else {
+      const now = new Date();
+      startDateMs = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime(); // today 00:00:00
+    }
+
+    const endDateMs = new Date(startDateMs).setHours(23, 59, 59, 999);
+    const startDateSec = Math.floor(startDateMs / 1000);
+    const endDateSec = Math.floor(endDateMs / 1000);
+    const offset = (page - 1) * limit;
+
+    const { transactionsQuery, totalCountQuery, params } = constructSalaryQuery(
+      startDateSec,
+      endDateSec,
+      user.phone,
+      limit,
+      offset
+    );
+
+    const [transactions] = await connection.query(transactionsQuery, params);
+    const [countResult] = await connection.query(totalCountQuery, [user.phone, startDateSec, endDateSec]);
+    const totalPages = Math.ceil(countResult[0].totalCount / limit);
+
+    res.json({
+      status: true,
+      message: "Success",
+      data: transactions,
+      currentPage: page,
+      totalPages,
+      timeStamp: new Date().toISOString(),
+    });
+
+  } catch (err) {
+    console.error("❌ listSalary Error:", err);
+    res.status(500).json({
+      status: false,
+      message: "Server Error",
+    });
+  }
+};
+
+
 const subordinatesDataByTimeAPI = async (req, res) => {
   try {
     const authToken = req.cookies.auth;
@@ -1851,6 +1949,7 @@ const promotionController = {
   getAttendanceBonus,
   subordinatesDataByTimeAPI,
   listCommission,
+  listSalary,
 };
 
 export default promotionController;
